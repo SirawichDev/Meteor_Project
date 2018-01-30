@@ -12,8 +12,8 @@ import ReactDOM from 'react-dom';
 import {Meteor} from 'meteor/meteor';
 
 Meteor.startup(function (){
-
-    let show = <p>Hello From show variable</p>
-    ReactDOM.render(show,document.getElementById("appg"));
+    let name ="Sirawich";
+    let show = <div><p>Hello From show variable My name is {name}</p><p>fooo</p></div>
+    ReactDOM.render(show,document.getElementById("app"));
 
 });
