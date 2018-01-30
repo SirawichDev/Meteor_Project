@@ -13,4 +13,7 @@ import {Meteor} from 'meteor/meteor';
 
 Meteor.startup(function (){
 
+    let show = <p>Hello From show variable</p>
+    ReactDOM.render(show,document.getElementById("appg"));
+
 });
