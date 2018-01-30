@@ -4,3 +4,4 @@ export let User = function () {
      return 'Hello User!';
  } 
 export let name = "Sirawich";
+export default def = "MiewMiew";
