@@ -28,11 +28,20 @@ Meteor.startup(function (){
         score: 50
         
     }];
+
+    const Rendetplayer = function (){
+        let num = [{val:4},{val:3},{val:6}];
+        return num.map(function (number){
+            return <p key={number.val}>{number.val}</p>
+        });
+        //return [<p key="3">3</p>,<p key="2">4</p>]
+    };
     let welcome = "WELCOME";
     let name ="Sirawich";
     let show = (  <div>
     <h1>{welcome}</h1>
     <p>Hello From show variable My name is {name}</p>
+    {Rendetplayer()}
     <p>fooo</p>
     </div>);
     ReactDOM.render(show,document.getElementById("app"));
