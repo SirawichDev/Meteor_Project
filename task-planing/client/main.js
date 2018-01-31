@@ -13,8 +13,21 @@ import {Meteor} from 'meteor/meteor';
 
 Meteor.startup(function (){
     const players = [{
+        _id: '1',
+        name:'Sirawich',
+        score: 100
+    },
+    {
+        _id: '2',
+        name: 'Manop',
+        score: 20
+    },
+    {
+        _id: '3',
+        name: 'Konew',
+        score: 50
         
-    }]
+    }];
     let welcome = "WELCOME";
     let name ="Sirawich";
     let show = (  <div>
