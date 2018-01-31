@@ -29,10 +29,9 @@ Meteor.startup(function (){
         
     }];
 
-    const Rendetplayer = function (){
-        let num = [{val:4},{val:3},{val:6}];
-        return num.map(function (number){
-            return <p key={number.val}>{number.val}</p>
+    const Rendetplayer = function (playerDb){
+        return playerDb.map(function (playerr){
+            return <p key={playerr._id}>{playerr.name},{playerr.score}</p>
         });
         //return [<p key="3">3</p>,<p key="2">4</p>]
     };
@@ -41,7 +40,7 @@ Meteor.startup(function (){
     let show = (  <div>
     <h1>{welcome}</h1>
     <p>Hello From show variable My name is {name}</p>
-    {Rendetplayer()}
+    {Rendetplayer(players)}
     <p>fooo</p>
     </div>);
     ReactDOM.render(show,document.getElementById("app"));
