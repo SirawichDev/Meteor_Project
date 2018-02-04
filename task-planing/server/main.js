@@ -11,8 +11,11 @@ import {Meteor} from 'meteor/meteor';
 import {Users} from './../imports/api/user';
 
 Meteor.startup(function (){
-
-    
+    Users.insert({
+        name: 'Sirawich',
+        score: 1
+    });
+    console.log(Users.find().fetch());
 });
 
 
