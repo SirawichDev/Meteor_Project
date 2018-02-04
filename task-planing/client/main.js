@@ -10,6 +10,12 @@ console.log(def);*/
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Meteor} from 'meteor/meteor';
+import {Users} from './../imports/api/user';
+
+setTimeout(function() {
+    console.log('Clients Side', Users.find().fetch());
+
+},1000);
 
 Meteor.startup(function (){
     const players = [{
