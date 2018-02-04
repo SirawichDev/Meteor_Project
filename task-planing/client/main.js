@@ -26,13 +26,20 @@ Meteor.startup(function (){
         _id: '3',
         name: 'Konew',
         score: 50
+    },
+       
+    {
+        _id: '4',
+        name: 'GG',
+        score: 99
+    
         
     }];
 
 
     const Rendetplayer = function (playerDb){
-        return playerDb.map(function (playerr){
-            return <p key={playerr._id}>{playerr.name},{playerr.score}</p>
+        return playerDb.map(function (user){
+            return <p key={user._id}> id number : {user._id} name :{user.name},Score :{user.score}</p>
         });
         //return [<p key="3">3</p>,<p key="2">4</p>]
     };
