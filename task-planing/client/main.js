@@ -53,7 +53,7 @@ Meteor.startup(function (){
       
     };
 
->>>>>>> Stashed changes
+
     let welcome = "WELCOME";
     let name ="Sirawich";
     let show = (  <div>
