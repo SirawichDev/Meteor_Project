@@ -11,13 +11,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Meteor} from 'meteor/meteor';
 import {Users} from './../imports/api/user';
-
+import {Tracker} from 'meteor/tracker';
+//REnder Data method 1 (Better Timeout) จับทุกๆ query ของข้อมูล
+Tracker.autorun(function() {
+    console.log('Clients Side', Users.find().fetch());
+});
+//Render data method 2
 setTimeout(function() {
     console.log('Clients Side', Users.find().fetch());
 
 },1000);
 
-Meteor.startup(function (){
     const players = [{
         _id: '1',
         name:'Sirawich',
@@ -50,7 +54,7 @@ Meteor.startup(function (){
         //return [<p key="3">3</p>,<p key="2">4</p>]
     };
 
-    const render = function(play){
+   const render = function(play){
         let num = [{val:1},{val:2},{val:3}];
         return num.map(function (miew){
 
@@ -59,16 +63,21 @@ Meteor.startup(function (){
       
     };
 
+Meteor.startup(function (){
+    Tracker.autorun(function() {
+       let User = Users.find().fetch();
+       let welcome = "WELCOME";
+       let name ="Sirawich";
+       let show = (  <div>
+       <h1>{welcome}</h1>
+       
+       <p>Hello From show variable My name is {name}</p>
+       {Rendetplayer(User)}
+       <p>fooo</p>
+       </div>
+    );
+       ReactDOM.render(show,document.getElementById("app"));
+    });
 
-    let welcome = "WELCOME";
-    let name ="Sirawich";
-    let show = (  <div>
-    <h1>{welcome}</h1>
-    {render(players)}
-    <p>Hello From show variable My name is {name}</p>
-    {Rendetplayer(players)}
-    <p>fooo</p>
-    </div>);
-    ReactDOM.render(show,document.getElementById("app"));
 
 });
