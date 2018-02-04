@@ -19,6 +19,7 @@ Meteor.startup(function (){
         name: 'Voung',
         score: 55
     });
+    console.log(Users.find().fetch());
    
 });
 
