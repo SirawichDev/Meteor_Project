@@ -10,6 +10,12 @@ $ meteor create [project_name]
 ```
 $ meteor run
 ```
+### Mongo
+
+> * MongoDb console
+```
+$ meteor mongo
+``` 
 
 ### Install 
 
