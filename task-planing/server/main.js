@@ -15,7 +15,11 @@ Meteor.startup(function (){
         name: 'Sirawich',
         score: 1
     });
-    console.log(Users.find().fetch());
+    Users.insert({
+        name: 'Voung',
+        score: 55
+    });
+   
 });
 
 
