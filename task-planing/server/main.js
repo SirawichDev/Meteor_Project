@@ -25,7 +25,7 @@ Meteor.startup(function (){
         score: -1
     });
     Lol.insert({
-        Company: 'ss',
+        Company: 'ssds',
     });
     console.log(Users.find().fetch());
    
