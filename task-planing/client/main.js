@@ -13,6 +13,7 @@ import {Meteor} from 'meteor/meteor';
 import {Users} from './../imports/api/user';
 import {Tracker} from 'meteor/tracker';
 //REnder Data method 1 (Better Timeout) จับทุกๆ query ของข้อมูล
+//เพราะว่าถ้า console.log ธรรมดาข้อมูลที่ถูกส่งขอไปทาง database มันใช้เวลาเยอะกว่าคำสั่งนี้ มีวิธีสองวิธีคือให้ settimeout ตั้งไว้รอ 1 วิแล้วค่อยทำคสั่ง
 Tracker.autorun(function() {
     console.log('Clients Side', Users.find().fetch());
 });
