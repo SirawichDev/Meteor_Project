@@ -8,26 +8,24 @@ console.log(User());
 console.log(add(1,2));*/
 
 import {Meteor} from 'meteor/meteor';
-import {Users} from './../imports/api/user';
-import {Lol} from './../imports/api/user';
+import {Uname} from './../imports/api/user';
+
 
 Meteor.startup(function (){
-    Users.insert({
+    Uname.insert({
         name: 'Sirawich',
         score: 1
     });
-    Users.insert({
+    Uname.insert({
         name: 'Voung',
         score: 55
     });
-    Users.insert({
+    Uname.insert({
         name: 'Miew',
         score: -1
     });
-    Lol.insert({
-        Company: 'ssds',
-    });
-    console.log(Users.find().fetch());
+
+    console.log(Uname.find().fetch());
    
 });
 

@@ -3,6 +3,6 @@ import {Mongo} from 'meteor/mongo';
 
 //Mini Mongo Collection
 
-export const Users = new Mongo.Collection('users');
-export const Lol = new Mongo.Collection('lol');
+export const Uname = new Mongo.Collection('Uname');
+
 
